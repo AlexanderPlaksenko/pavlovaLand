@@ -1,0 +1,27 @@
+<header class='header-wrapper wrapper'>
+	<div class='container header-container'>
+		<div class='logo'>
+			<a href='/'>
+				<img src='./images/logo.png' alt=''>
+			</a>
+		</div>
+		
+		<div class='header-menu'>
+			{% for headerItem in headerMenu %}
+                <a href='{{ loop.index }}' class='header-menu_el'>{{ headerItem.value }}</a>
+			{% endfor %}
+		</div>
+		
+		<div class='header-info'>
+			<div class='header-info_text'>
+				Бесплатная
+				консультация
+			</div>
+			<div class='header-line'></div>
+			<div class='header-info_phones'>
+				<a href='tel:8(800)555-47-24'>8(800)555-47-24</a>
+				<a href='tel:8(343)310-24-91'>8(343)310-24-91</a>
+			</div>
+		</div>
+	</div>
+</header>

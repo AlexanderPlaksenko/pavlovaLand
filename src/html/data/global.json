@@ -1,0 +1,11 @@
+{
+  "message": "Blendid!",
+
+  "headerMenu": [
+    {"value": "Портфолио"},
+    {"value": "Услуги"},
+    {"value": "Запись"},
+    {"value": "Отзывы"},
+    {"value": "Контакты"}
+  ]
+}
