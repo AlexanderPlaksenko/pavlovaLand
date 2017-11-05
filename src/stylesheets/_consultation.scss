@@ -1,28 +1,35 @@
-.consultation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #e8e8e8;
-  background-image: linear-gradient(90deg, #e8e8e8 0%, #eee2e2 100%);
+.consultation
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  padding: 32px 80px 28px 80px;
-}
-.cons-text {
-  color: #000000;
-}
-.cons-title {
-  font-size: 23px;
-}
-.cons-descr {
-  font-size: 16px;
-  font-weight: 300;
-}
-.cons-form {
-  display: flex;
-  justify-content: flex-end;
-  flex-grow: 1;
+    padding: 32px 80px 28px 80px;
 
-  .input {
-    margin: 0 12px;
-  }
+    background-color: #e8e8e8;
+    background-image: linear-gradient(-27deg, #e8e8e8 0%, #eee2e2 100%);
+}
+.cons-text
+{
+    color: #000;
+}
+.cons-title
+{
+    font-size: 23px;
+}
+.cons-descr
+{
+    font-size: 16px;
+    font-weight: 300;
+}
+.cons-form
+{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    .input
+    {
+        margin: 0 12px;
+    }
 }

@@ -1,0 +1,20 @@
+.why-wrapper
+{
+    position: relative;
+
+    background-color: #833582;
+    background-image: linear-gradient(-27deg, rgba(255, 0, 0, .5) 0%, rgba(255, 0, 222, 0) 100%);
+
+    &:after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        content: '';
+
+        background-image: url('../images/why/why-bg.png');
+    }
+}

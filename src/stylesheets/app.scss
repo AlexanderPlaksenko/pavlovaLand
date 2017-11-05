@@ -1,29 +1,33 @@
-@import "normalize";
-@import "base/typography";
+@import 'normalize';
+@import 'base/typography';
 
-html {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: -moz-crisp-edges;
+html
+{
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
 }
 
-* {
-  box-sizing: border-box;
+*
+{
+    box-sizing: border-box;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
 }
 
-.container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-
-  padding-left: 33px;
-  padding-right: 33px;
+.container
+{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-right: 33px;
+    padding-left: 33px;
 }
 
-@import "header";
-@import "consultation";
-@import "button";
+@import 'header';
+@import 'consultation';
+@import 'why';
+@import 'button';
