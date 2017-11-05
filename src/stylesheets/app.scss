@@ -26,8 +26,19 @@ html
     padding-right: 33px;
     padding-left: 33px;
 }
+// Helpes
+.flex-column {
+    flex-direction: column;
+}
+.flex-grow {
+    flex-grow: 1;
+}
+.justify-center {
+    justify-content: center;
+}
 
 @import 'header';
 @import 'consultation';
+@import 'subscribe';
 @import 'why';
 @import 'button';

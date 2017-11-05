@@ -1,9 +1,31 @@
+.why-title
+{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+
+    text-align: center;
+
+    color: #fff;
+}
+.why-descr
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 36px;
+
+    text-align: center;
+
+    color: #fffefe;
+}
 .why-wrapper
 {
     position: relative;
 
+    padding: 35px 0;
+
     background-color: #833582;
-    background-image: linear-gradient(-27deg, rgba(255, 0, 0, .5) 0%, rgba(255, 0, 222, 0) 100%);
+    background-image: linear-gradient(117deg, #843483 0%, #9b186d 100%);
 
     &:after
     {
@@ -16,5 +38,49 @@
         content: '';
 
         background-image: url('../images/why/why-bg.png');
+        background-position: center center;
     }
+}
+.why-block
+{
+    display: flex;
+
+    flex-wrap: wrap;
+    .why-el
+    {
+        display: flex;
+        flex-direction: column;
+
+        max-height: 110px;
+        margin: 25px auto;
+
+        text-align: center;
+
+        flex-basis: 33.33%;
+    }
+}
+.why-el_descr
+{
+    font-size: 16px;
+    font-weight: 300;
+
+    color: #fff;
+}
+.why-el_img
+{
+    display: flex;
+    flex-direction: column;
+
+    height: 65px;
+    margin-bottom: 17px;
+
+    justify-content: center;
+    align-items: center;
+    img
+    {
+        max-width: 100%;
+    }
+}
+.why-h25 {
+    height: 25px;
 }
