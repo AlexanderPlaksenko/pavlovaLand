@@ -26,8 +26,10 @@
 
     background-color: #833582;
     background-image: linear-gradient(117deg, #843483 0%, #9b186d 100%);
+    background-repeat: no-repeat;
 
-    &:after
+
+    &:before
     {
         position: absolute;
         top: 0;
@@ -81,6 +83,7 @@
         max-width: 100%;
     }
 }
-.why-h25 {
+.why-h25
+{
     height: 25px;
 }

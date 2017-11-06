@@ -1,3 +1,6 @@
-import './modules'
+import './modules';
 
-console.log(`app.js has loaded!`)
+var jquery = require('jquery');
+var slick = require('slick-carousel');
+
+console.log(`app.js has loaded!`);

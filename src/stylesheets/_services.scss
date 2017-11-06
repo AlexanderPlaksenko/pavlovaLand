@@ -1,0 +1,54 @@
+.service-wrapper
+{
+    padding: 50px 0;
+}
+.service-block
+{
+    display: flex;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .service-el
+    {
+        max-width: 200px;
+        margin: 10px;
+    }
+}
+.service-title
+{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+
+    text-align: center;
+
+    color: #000;
+}
+.service-block_title
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 36px;
+
+    text-align: center;
+
+    color: #000;
+}
+.service-el_img
+{
+    margin-bottom: 10px;
+}
+.service-el_button
+{
+    display: flex;
+
+    height: 61px;
+
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+}
