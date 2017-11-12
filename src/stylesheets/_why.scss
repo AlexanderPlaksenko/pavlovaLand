@@ -7,6 +7,8 @@
     text-align: center;
 
     color: #fff;
+    z-index: 1;
+    position: relative;
 }
 .why-descr
 {
@@ -17,6 +19,8 @@
     text-align: center;
 
     color: #fffefe;
+    z-index: 1;
+    position: relative;
 }
 .why-wrapper
 {
@@ -45,6 +49,8 @@
 }
 .why-block
 {
+    z-index: 1;
+    position: relative;
     display: flex;
 
     flex-wrap: wrap;

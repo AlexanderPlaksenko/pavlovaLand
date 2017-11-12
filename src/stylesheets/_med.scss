@@ -1,0 +1,40 @@
+.fancy-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+
+  .med-image {
+    margin: 0 40px;
+    cursor: pointer;
+    transition: transform .12s ease-in;
+    &:hover {
+      transform: scale(1.16);
+    }
+  }
+  .studio-image {
+    margin: 5px;
+  }
+}
+
+.med-wrapper {
+  padding: 50px 0;
+}
+
+.med-title {
+  color: #000000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.med-descr {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 5px;
+}

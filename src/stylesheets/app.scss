@@ -26,7 +26,7 @@ html
     padding-right: 33px;
     padding-left: 33px;
 }
-// Helpes
+
 .flex-column {
     flex-direction: column;
 }
@@ -43,4 +43,8 @@ html
 @import 'why';
 @import 'services';
 @import 'collective';
+@import 'med';
+@import 'studio';
 @import 'button';
+@import 'footer';
+@import 'fancy';
