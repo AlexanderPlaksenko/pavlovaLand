@@ -9,6 +9,22 @@
     align-items: center;
     justify-content: center;
     margin: 0 40px;
+    font-size: 16px;
+    text-align: center;
+
+    img {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include media-context(('custom': 678px)) {
+    @include media("<=custom") {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .how-work-item {
+        margin: 0;
+      }
+    }
   }
 }
 .footer-text {

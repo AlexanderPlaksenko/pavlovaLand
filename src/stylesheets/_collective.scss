@@ -21,6 +21,11 @@
         background-repeat: no-repeat;
         background-position: center center;
     }
+    @include media-context(('custom': 678px)) {
+        @include media("<=custom") {
+            padding: 25px 0;
+        }
+    }
 }
 .collective-title
 {

@@ -1,63 +1,88 @@
-.subscribe-us
-{
-    font-size: 18px;
-    font-weight: 600;
+.subscribe-us {
+  font-size: 18px;
+  font-weight: 600;
 
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 
-    white-space: nowrap;
+  white-space: nowrap;
 
-    color: #000;
+  color: #000;
 }
+
 .subscribe-el,
-.subscribe-wrapper
-{
-    display: flex;
+.subscribe-wrapper {
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 }
 
-.subscribe-wrapper
-{
-    max-width: 85%;
-    margin: 0 auto;
-    padding: 35px 0 35px 0;
-}
-.ul
-{
-    font-size: 14px;
-    font-weight: 300;
+.subscribe-el {
+  @include media("≥phone", "≤tablet") {
+    flex-wrap: wrap;
 
-    margin: 0;
-    padding: 0;
-
-    list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAE0lEQVQYV2N8feT1fwY0wEgDQQBBMxID2sZhRAAAAABJRU5ErkJggg==');
-
-    color: #000;
-    .li
-    {
-        padding-right: 10px;
-        &:not(:last-child)
-        {
-            margin-bottom: 20px;
-        }
+    .ul .li {
+      padding-right: 10px;
+      margin-bottom: 10px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
+  }
 }
-.subscribe-line
-{
-    width: 2px;
-    height: 75px;
-    margin: 0 40px;
 
-    opacity: .2;
-    background-color: #ebc4eb;
+.subscribe-wrapper {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 35px 0 35px 0;
+
+  @include media("≥phone", "≤tablet") {
+    padding: 15px 0 15px 0;
+  }
+  @include media-context(('custom': 678px)) {
+    @include media("<=custom") {
+      flex-wrap: wrap;
+    }
+  }
 }
-.subscribe-links
-{
-    display: flex;
 
-    width: 100%;
+.ul {
+  font-size: 14px;
+  font-weight: 300;
 
-    align-items: center;
-    justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAE0lEQVQYV2N8feT1fwY0wEgDQQBBMxID2sZhRAAAAABJRU5ErkJggg==');
+
+  color: #000;
+  .li {
+    padding-right: 10px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.subscribe-line {
+  width: 2px;
+  height: 75px;
+  margin: 0 40px;
+
+  opacity: .2;
+  background-color: #ebc4eb;
+
+  @include media-context(('custom': 678px)) {
+    @include media("<=custom") {
+      display: none;
+    }
+  }
+}
+
+.subscribe-links {
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
 }

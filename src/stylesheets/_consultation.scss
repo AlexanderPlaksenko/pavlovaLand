@@ -7,7 +7,18 @@
     padding: 32px 80px 28px 80px;
 
     background-color: #e8e8e8;
-    background-image: linear-gradient(117deg, #e8e8e8 0%, #eee2e2 100%);
+    background-image: linear-gradient(117deg, #e8e8e8 0%, #eedddd 100%);
+
+    @include media("≥phone", "≤tablet") {
+        padding: 18px 40px 14px 40px;
+    }
+    @include media-context(('custom': 678px)) {
+        @include media("<=custom") {
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 18px 10px 14px 10px;
+        }
+    }
 }
 .cons-text
 {
@@ -31,5 +42,18 @@
     .input
     {
         margin: 0 12px;
+        @include media-context(('custom': 678px)) {
+            @include media("<=custom") {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    @include media-context(('custom': 678px)) {
+        @include media("<=custom") {
+            margin-top: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
 }

@@ -9,6 +9,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include media("≥phone", "≤tablet") {
+        flex-wrap: wrap;
+
+        .logo {order: 1}
+        .header-menu {
+            order: 3;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header-info {order: 2}
+    }
 }
 
 .header-menu

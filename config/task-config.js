@@ -21,7 +21,8 @@ module.exports = {
       sass: {
           indentedSyntax: false,
           includePaths: [
-              "./node_modules/normalize.css"
+              "./node_modules/normalize.css",
+              "./node_modules/include-media/dist"
           ]
       },
       extensions: ["sass", "scss", "css"]

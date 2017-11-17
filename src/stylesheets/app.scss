@@ -1,4 +1,5 @@
 @import 'normalize';
+@import 'include-media';
 @import 'base/typography';
 
 html
@@ -10,8 +11,12 @@ html
 *
 {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
+img {
+    max-width: 100%;
+}
 .wrapper
 {
     display: flex;
@@ -25,6 +30,20 @@ html
     margin: 0 auto;
     padding-right: 33px;
     padding-left: 33px;
+
+    @include media-context(('custom': 678px)) {
+        @include media("<=custom") {
+            padding-right: 15px;
+            padding-left: 15px;
+
+            >[class*="-title"] {
+                font-size: 28px;
+                line-height: 30px;
+
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 .flex-column {
@@ -36,8 +55,12 @@ html
 .justify-center {
     justify-content: center;
 }
+.clickable {
+    cursor: pointer;
+}
 
 @import 'header';
+@import 'mainSlider';
 @import 'consultation';
 @import 'subscribe';
 @import 'why';
@@ -48,3 +71,4 @@ html
 @import 'button';
 @import 'footer';
 @import 'fancy';
+

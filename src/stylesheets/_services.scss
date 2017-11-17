@@ -1,6 +1,11 @@
 .service-wrapper
 {
     padding: 50px 0;
+    @include media-context(('custom': 678px)) {
+        @include media("<=custom") {
+            padding: 25px 0;
+        }
+    }
 }
 .service-block
 {
@@ -15,6 +20,11 @@
     {
         max-width: 200px;
         margin: 10px;
+        @include media-context(('custom': 678px)) {
+            @include media("<=custom") {
+                flex-basis: calc(50% - 20px);
+            }
+        }
     }
 }
 .service-title

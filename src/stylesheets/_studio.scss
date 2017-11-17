@@ -36,4 +36,16 @@
     background-image: url('../images/studio/wrapper.png');
     background-position: center center;
   }
+  @include media-context(('custom': 678px)) {
+    @include media("<=custom") {
+      padding: 30px 0 25px 0;
+    }
+  }
+}
+.studio-image {
+  border: 3px solid white;
+
+  img {
+    display: block;
+  }
 }

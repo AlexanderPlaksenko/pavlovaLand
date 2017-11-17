@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "blendid": "^4.3.1",
+    "include-media": "^1.4.9",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0",
     "slick-carousel": "^1.8.1"
