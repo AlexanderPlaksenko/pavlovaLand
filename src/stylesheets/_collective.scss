@@ -45,9 +45,26 @@
     z-index: 1;
 
     margin-top: 50px;
+    .slick-slide {
+        text-align: center;
+    }
+    .slick-next {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAAB5klEQVRIS53VyeuNYRjG8e9lXlCSiCxYGJIoSsiYzCGz/1DmaYNSykJZWFCUpIyZYmGIyKXr103v4Qzv696cxen+dL3PcD+yPR7YBMwALkr6zn+UbK8GdlfvvcJ+dLUCzQf2VaL03wfOSeqEKZ22ZwNHgJmV5FFhX9omG4MKmwUcBvKbegyckdQK+wMVlgVPsjmFPQNOSfo4KlkPVNh04Cgwt5pfVrL3w7B/oMKmAseBeW2xvlBh04CDwILCXgOnJb3rl2wgVNgU4BCwsJrfFvbmb2woVNiESra0mrNW2YBXTWwkVNikOrTLqvlDbcCL31grqLBxwH5gRTV/Ak5KyhGhNdT4zF3AqsI+12c+6QQ1sHXAlgryFbjWGSpsEXAMyAhK3egM2V4J7Gkg1yXd7ATZXgtsA7LwqauSbnVabNtZl+0F/ASuSLrdafttrwe2Nnb5kqQ7rQ+k7XzCZmBjNWWeX5Z0t9MVsZ0UG6rpG3BB0oNOl9b2TmBNAzkr6WE/pO9i1+cEyeuSynQ8Lymjd2D1m5B7G1cg9ykvylCkJ5HtiUCQ5Y0kGWRPhyXp2X7bk4EDwJL6I2Mia/K8DTKWyHbmc5IsbiBJkqHfugLltObUpjL9TkjKSO1UgfL87Kgne+BwH6X+AtjXrIu8Ss7UAAAAAElFTkSuQmCC") no-repeat;
+    }
+    .slick-prev {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAeCAYAAAAhDE4sAAAB8UlEQVRIS52V2auNcRSGn1dEhgsyZSxJUVy4UC6UUrgxT/kPzeJ0OOhkbJM6iiTDhRsRSYoL86v1tb7TPnv4hr1qt2++9fSu6f2JEcP2HOAQ8AW4q1E4tmcnZGvmX2sNSshRYEtCQtHVViDb84GAbEzIZ+C8pI+NQQk5DmxIyCfggqT4pxHI9iLgJLA2IR9SSZRVRC3I9hIglKzKnPfAOUlfuwdVCRoAeQeckfS9d9pDQbaXAieAFZn0Frgk6duglRkIsr08Icsy6Q1wUdKPYXvXB7K9MhsbvYl4kUr+VC3vDJDt1dnYxZn0vFg26VfdBUyDbMdoTwELM+kpcEXSvzrI9Phtr89yFmTSFHBdUmU5M8ZvezuwF5gHGLgNdNpACkW2dwPxi/gLnJX0ukk5fQtpexewpws2LulJG1h3s3cC+zI5GnxL0sOmsN7x7wD2A7MScFNSpwls0EJG8w9mcjR/UtKDOtiwE9kGHADClyPuAXeqdqrqaDcDh4G5CbsvaXKYsjob2QQc64I9kjQxCNbE2MJajwDhkhGPgYneMmtBkWk7YGH65R1OSRrrW8i6iSRsXXpUqewZMCbpd3EiTSDlN7bXZM9Km3kJXJb0sxUolcUjEBZcwl4Vytoo6lIWFnwaKF20MxIolZWPQ7xtN/4DnZupyDfRCFIAAAAASUVORK5CYII=") no-repeat;
+    }
+    .slick-dots li.slick-active button:before {
+        background-color: white;
+    }
+    .slick-track {
+        align-items: flex-start;
+    }
 }
 .col-item {
     text-align: center;
+    max-width: 207px;
+    margin: 0 auto;
 }
 .col-prof {
     color: #ffffff;
@@ -57,18 +74,33 @@
 }
 .col-name {
     color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+/*    color: #ffffff;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 400;*/
 }
 .col-text {
     color: #ffffff;
     font-size: 14px;
     font-weight: 300;
     text-align: justify;
-    line-height: 15px;
+    line-height: 18px;
 }
 .col-img {
+    width: 207px;
+    height: 207px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
     margin-bottom: 15px;
+    img {
+        top: -30px;
+        left: 0;
+        position: absolute;
+    }
 }
 .col-sep {
     width: 72px;

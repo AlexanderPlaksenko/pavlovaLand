@@ -4,11 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "baron": "^3.0.1",
     "blendid": "^4.3.1",
+    "imports-loader": "^0.7.1",
     "include-media": "^1.4.9",
     "inputmask": "^3.3.10",
     "jquery": "^3.2.1",
+    "jquery-mousewheel": "^3.1.13",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "nicescroll": "^3.7.4",
     "normalize.css": "^7.0.0",
+    "perfect-scrollbar": "^1.2.0",
     "slick-carousel": "^1.8.1"
   }
 }

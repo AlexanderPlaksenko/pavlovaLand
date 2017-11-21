@@ -12,6 +12,10 @@
     &:hover {
       transform: scale(1.16);
     }
+
+    @include media("≥phone", "≤tablet") {
+      margin: 0 10px;
+    }
   }
   .studio-image {
     margin: 5px;
@@ -35,6 +39,5 @@
   font-size: 14px;
   font-weight: 300;
   text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px 0 40px 0;
 }

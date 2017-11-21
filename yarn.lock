@@ -893,6 +893,10 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
+baron@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/baron/-/baron-3.0.1.tgz#057dfebff7fc6ae84050ebb94f51a3ee3c7fa8db"
+
 base64-arraybuffer@0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
@@ -3321,6 +3325,13 @@ immutable@^3.7.6:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
 
+imports-loader@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.7.1.tgz#f204b5f34702a32c1db7d48d89d5e867a0441253"
+  dependencies:
+    loader-utils "^1.0.2"
+    source-map "^0.5.6"
+
 in-publish@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/in-publish/-/in-publish-2.0.0.tgz#e20ff5e3a2afc2690320b6dc552682a9c7fadf51"
@@ -3646,7 +3657,11 @@ istextorbinary@1.0.2:
     binaryextensions "~1.0.0"
     textextensions "~1.0.0"
 
-jquery@^3.2.1:
+jquery-mousewheel@>=3.0.6, jquery-mousewheel@^3.1.13:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
+
+jquery@>=1.8.3, jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -4180,6 +4195,12 @@ make-dir@^1.0.0:
   dependencies:
     pify "^3.0.0"
 
+malihu-custom-scrollbar-plugin@^3.1.5:
+  version "3.1.5"
+  resolved "https://registry.yarnpkg.com/malihu-custom-scrollbar-plugin/-/malihu-custom-scrollbar-plugin-3.1.5.tgz#310cecc5e59415a1c29e9dfb5d2b6e01d66a29ef"
+  dependencies:
+    jquery-mousewheel ">=3.0.6"
+
 map-cache@^0.2.0, map-cache@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/map-cache/-/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
@@ -4456,6 +4477,12 @@ negotiator@0.6.1:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+nicescroll@^3.7.4:
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/nicescroll/-/nicescroll-3.7.4.tgz#8cfd3b58fb95e7c5cb279e2208fc10ea90e35a18"
+  dependencies:
+    jquery ">=1.8.3"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -4998,6 +5025,10 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+perfect-scrollbar@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.2.0.tgz#ad23a2529c17f4535f21d1486f8bc3046e31a9d2"
 
 performance-now@^0.2.0:
   version "0.2.0"
