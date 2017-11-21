@@ -69,11 +69,11 @@
 
         text-align: center;
 
-        flex-basis: 33.33%;
+        width: 33.33%;
 
         @include media-context(('custom': 678px)) {
             @include media("<=custom") {
-                flex-basis: 50%;
+                width: 50%;
                 max-height: none;
             }
         }

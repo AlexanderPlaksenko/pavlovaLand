@@ -22,7 +22,7 @@
         margin: 10px;
         @include media-context(('custom': 678px)) {
             @include media("<=custom") {
-                flex-basis: calc(50% - 20px);
+                width: calc(50% - 20px);
             }
         }
     }

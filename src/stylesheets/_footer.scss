@@ -19,10 +19,11 @@
 
   @include media-context(('custom': 678px)) {
     @include media("<=custom") {
+      margin: 20px 0;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       .how-work-item {
-        margin: 0;
+        margin: 10px 0;
       }
     }
   }
