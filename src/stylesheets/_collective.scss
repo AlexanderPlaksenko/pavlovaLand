@@ -20,6 +20,7 @@
         background-image: url('../images/collective/collective-bg.png');
         background-repeat: no-repeat;
         background-position: center center;
+        background-size: cover;
     }
     @include media-context(('custom': 678px)) {
         @include media("<=custom") {
@@ -38,4 +39,41 @@
     color: #fff;
     z-index: 1;
     position: relative;
+}
+.collective-carousel {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 50px;
+}
+.col-item {
+    text-align: center;
+}
+.col-prof {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.col-name {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+.col-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 15px;
+}
+.col-img {
+    margin-bottom: 15px;
+}
+.col-sep {
+    width: 72px;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0.1;
+    margin: 10px auto 15px auto;
 }

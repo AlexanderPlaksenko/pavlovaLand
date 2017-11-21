@@ -2,61 +2,91 @@
 @import 'include-media';
 @import 'base/typography';
 
-html
-{
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: -moz-crisp-edges;
+html {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
 }
 
-*
-{
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 img {
-    max-width: 100%;
-}
-.wrapper
-{
-    display: flex;
-    flex-direction: column;
+  max-width: 100%;
 }
 
-.container
-{
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-right: 33px;
-    padding-left: 33px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
-    @include media-context(('custom': 678px)) {
-        @include media("<=custom") {
-            padding-right: 15px;
-            padding-left: 15px;
+.container {
+  width: 100%;
+  max-width: 1012px;
+  margin: 0 auto;
+  padding-right: 33px;
+  padding-left: 33px;
 
-            >[class*="-title"] {
-                font-size: 28px;
-                line-height: 30px;
+  @include media-context(('custom': 678px)) {
+    @include media("<=custom") {
+      padding-right: 15px;
+      padding-left: 15px;
 
-                margin-bottom: 10px;
-            }
-        }
+      > [class*="-title"] {
+        font-size: 28px;
+        line-height: 30px;
+
+        margin-bottom: 10px;
+      }
     }
+  }
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
+
 .flex-grow {
-    flex-grow: 1;
+  flex-grow: 1;
 }
+
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
+
 .clickable {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.dn {
+  display: none;
+}
+
+.fancyH-w {
+  width: 29%;
+  padding: 10px 0 !important;
+  overflow: hidden !important;
+  display: none;
+  iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 0 !important;
+    .ehRight {
+      margin-right: 50px;
+    }
+  }
+
+  @include media-context(('custom': 678px)) {
+    @include media("<=custom") {
+      width: 80%;
+    }
+  }
+}
+
+.feed-h20 {
+  height: 20px;
 }
 
 @import 'header';
@@ -71,4 +101,6 @@ img {
 @import 'button';
 @import 'footer';
 @import 'fancy';
+@import 'slick';
+@import 'modal';
 
