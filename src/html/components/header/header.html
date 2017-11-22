@@ -8,7 +8,10 @@
 		
 		<div class='header-menu'>
 			{% for headerItem in headerMenu %}
-                <a href='{{ loop.index }}' class='header-menu_el'>{{ headerItem.value }}</a>
+                <div class='header-menu_el'
+                     {{ "data-scroll-to=" + "#id" + loop.index if headerItem.hasScroll}}
+					 {{ "data-link-to=" + "#link" + loop.index if headerItem.hasLink}}
+			>{{ headerItem.value }}</div>
 			{% endfor %}
 		</div>
 		

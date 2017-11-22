@@ -2,10 +2,20 @@
   "message": "Blendid!",
 
   "headerMenu": [
-    {"value": "Портфолио"},
-    {"value": "Услуги"},
-    {"value": "Запись"},
-    {"value": "Отзывы"},
-    {"value": "Контакты"}
+    {"value": "Портфолио",
+     "hasScroll": false,
+     "hasLink": true},
+    {"value": "Услуги",
+     "hasScroll": true,
+     "hasLink": false},
+    {"value": "Запись",
+     "hasScroll": false,
+     "hasLink": true},
+    {"value": "Отзывы",
+     "hasScroll": true,
+     "hasLink": false},
+    {"value": "Контакты",
+     "hasScroll": false,
+     "hasLink": true}
   ]
 }

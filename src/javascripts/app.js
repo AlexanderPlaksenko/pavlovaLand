@@ -128,7 +128,6 @@ $('.collective-carousel, .youtube-carousel').slick({
                             delete profiles[j].id
                         }
                     }
-                    console.log(profiles[j].id);
                     if (profiles[j].id === items[i].from_id) {
                         items[i].first_name = profiles[j].first_name;
                         items[i].last_name = profiles[j].last_name;
@@ -186,3 +185,32 @@ $('.collective-carousel, .youtube-carousel').slick({
         });
     })
 })();
+var header = $('.header-wrapper');
+var headerHeight = header.outerHeight();
+
+console.log(headerHeight);
+$("[data-scroll-to]").on('click', function() {
+    var $this = $(this),
+        $toElement      = $this.attr('data-scroll-to'),
+        $focusElement   = $this.attr('data-scroll-focus'),
+        $offset         = $this.attr('data-scroll-offset') * 1 || 0,
+        $speed          = $this.attr('data-scroll-speed') * 1 || 500;
+
+    $('html, body').animate({
+        scrollTop: $($toElement).offset().top + $offset
+    }, $speed);
+
+    if ($focusElement) $($focusElement).focus();
+});
+$("[data-link-to]").on('click', function() {
+    var $this = $(this),
+        $toElement      = $this.attr('data-link-to');
+    $($toElement).toggleClass('activeTop');
+    if ($($toElement).css('top') === headerHeight + 'px') {
+        $($toElement).css('top', '');
+        return false;
+    } else {
+        $($toElement).css('top', headerHeight);
+        return false;
+    }
+});

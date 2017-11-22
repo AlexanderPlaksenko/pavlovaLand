@@ -2,6 +2,14 @@
 {
     padding-top: 18px;
     padding-bottom: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+
+    @include media("≥phone", "≤tablet") {
+        padding-bottom: 6px;
+    }
 }
 
 .header-container
@@ -61,6 +69,9 @@
     text-align: right;
 
     color: #010101;
+    @include media("≥phone", "≤tablet") {
+        display: none;
+    }
 }
 .header-info_phones
 {
@@ -87,4 +98,8 @@
     margin: 0 14px;
 
     background-color: #ddd;
+
+    @include media("≥phone", "≤tablet") {
+        display: none;
+    }
 }

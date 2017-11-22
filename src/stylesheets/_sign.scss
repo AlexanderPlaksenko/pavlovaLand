@@ -1,0 +1,83 @@
+.signWrapper {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  transition: all .25s linear;
+  background-color: white;
+  padding: 15px 0;
+/*  opacity: 0;
+  pointer-events: none;*/
+}
+.signForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.signTitle {
+  text-align: center;
+  font-weight: 500;
+}
+.fromTop {
+  z-index: 2;
+}
+.signBlock {
+  margin: 15px 0;
+
+  input {
+    margin: 0 15px;
+  }
+
+  @include media("≥phone", "≤tablet") {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+.signCheckbox {
+  margin: 5px 0 0 0;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+  position: relative;
+  visibility: hidden;
+  margin: 0 16px;
+}
+
+input[type="checkbox"]:after {
+  border: 1px solid #166B94;
+  border-radius: 3px;
+  color: #fff;
+  content: "";
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  visibility: visible;
+  width: 16px;
+}
+
+input[type=checkbox]:checked:after {
+  border: 1px solid #979797;
+  color: #979797;
+  content: "✓";
+}
+
+input[type=checkbox]:checked + label {
+  color: #979797;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.signCheckbox {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: end;
+}
