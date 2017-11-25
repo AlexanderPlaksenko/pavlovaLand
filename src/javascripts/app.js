@@ -7,6 +7,7 @@ var inputmask = require('inputmask/dist/min/jquery.inputmask.bundle.min');
 var fancy = require('fancy');
 var jm = require('jquery-mousewheel');
 var scrollbar = require('malihu-custom-scrollbar-plugin');
+var spectragram = require("spectragram.min");
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -188,7 +189,6 @@ $('.collective-carousel, .youtube-carousel').slick({
 var header = $('.header-wrapper');
 var headerHeight = header.outerHeight();
 
-console.log(headerHeight);
 $("[data-scroll-to]").on('click', function() {
     var $this = $(this),
         $toElement      = $this.attr('data-scroll-to'),
@@ -214,3 +214,31 @@ $("[data-link-to]").on('click', function() {
         return false;
     }
 });
+
+(function () {
+    jQuery.fn.spectragram.accessData = {
+        accessToken: '1982333115.960a4d5.891a342883d641a6b4a8d67ba35fff13',
+        clientID: '960a4d59c0c44c8bb7db59b3e144ca98'
+    };
+    $('#instafeedVek').spectragram('getRecentTagged',{
+        query: 'pavlovastudioeye'
+    });
+})();
+(function () {
+    jQuery.fn.spectragram.accessData = {
+        accessToken: '1982333115.960a4d5.891a342883d641a6b4a8d67ba35fff13',
+        clientID: '960a4d59c0c44c8bb7db59b3e144ca98'
+    };
+    $('#instafeedBrow').spectragram('getRecentTagged',{
+        query: 'pavlovastudiobrow'
+    });
+})();
+(function () {
+    jQuery.fn.spectragram.accessData = {
+        accessToken: '1982333115.960a4d5.891a342883d641a6b4a8d67ba35fff13',
+        clientID: '960a4d59c0c44c8bb7db59b3e144ca98'
+    };
+    $('#instafeedGub').spectragram('getRecentTagged',{
+        query: 'pavlovastudiolips'
+    });
+})();

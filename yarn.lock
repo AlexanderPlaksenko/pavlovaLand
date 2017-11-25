@@ -3381,6 +3381,10 @@ inputmask@^3.3.10:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-3.3.10.tgz#f8395da03484ebf05c73a4f141adcf9f02a03f42"
 
+instafeed@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/instafeed/-/instafeed-2.0.0.tgz#395b4d778c8c9062c408f3658259c77443d207ba"
+
 interpret@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.4.tgz#820cdd588b868ffb191a809506d6c9c8f212b1b0"

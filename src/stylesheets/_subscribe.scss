@@ -86,3 +86,9 @@
   align-items: center;
   justify-content: space-between;
 }
+.subscribe-link {
+  transition: all .15s ease-in;
+  &:hover {
+    transform: scale(.90);
+  }
+}

@@ -1,25 +1,31 @@
 .signWrapper {
   position: fixed;
-  top: -100%;
+  top: -260px;
   width: 100%;
   transition: all .25s linear;
   background-color: white;
   padding: 15px 0;
-/*  opacity: 0;
-  pointer-events: none;*/
+  pointer-events: none;
+  display: none;
+  z-index: 2;
+
+  &.activeTop {
+    pointer-events: auto;
+    display: block;
+  }
 }
+
 .signForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .signTitle {
   text-align: center;
   font-weight: 500;
 }
-.fromTop {
-  z-index: 2;
-}
+
 .signBlock {
   margin: 15px 0;
 
@@ -38,6 +44,7 @@
     }
   }
 }
+
 .signCheckbox {
   margin: 5px 0 0 0;
 }
@@ -76,8 +83,79 @@ input[type=checkbox]:checked + label {
 }
 
 .signCheckbox {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   display: flex;
   align-items: end;
+}
+
+.containerFlex {
+  display: flex;
+  overflow: hidden;
+
+  .leftSide,
+  .rightSide {
+    width: 50%;
+  }
+}
+
+.contactIcon {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 35px;
+  line-height: 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url("../images/contacts-icons.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.contactLoc {
+  color: #2f2f2f;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:before {
+    background-position: 0 0;
+  }
+}
+
+.contactTime {
+  margin-bottom: 20px;
+  &:before {
+    background-position: 0 -63px;
+  }
+}
+.contactPhoneWrapper {
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+.contactsPhones {
+  margin-bottom: 10px;
+}
+.contactPhone {
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #010101;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:before {
+    background-position: 0 -41px;
+  }
+}
+.contactInfo {
+  margin-left: 35px;
 }
