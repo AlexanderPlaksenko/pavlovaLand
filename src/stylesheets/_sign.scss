@@ -1,18 +1,11 @@
 .signWrapper {
   position: fixed;
-  top: -260px;
+  top: -200px;
   width: 100%;
-  transition: all .25s linear;
   background-color: white;
   padding: 15px 0;
-  pointer-events: none;
   display: none;
   z-index: 2;
-
-  &.activeTop {
-    pointer-events: auto;
-    display: block;
-  }
 }
 
 .signForm {

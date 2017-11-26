@@ -70,6 +70,7 @@
     text-align: right;
 
     color: #010101;
+    cursor: pointer;
     @include media("≥phone", "≤tablet") {
         display: none;
     }
