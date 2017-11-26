@@ -1,3 +1,64 @@
+.vkFolio {
+  height: 80vh;
+  overflow: auto;
+}
+.vkFolio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.vkFolio-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
 .vkFolio-item {
+  max-width: 210px;
+  margin: 5px;
+}
+.folioBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  min-width: 222px;
+  max-width: 222px;
+  height: 431px;
 
+  position: relative;
+
+  &.bOne {
+    background-image: url("../images/folio/1.png");
+    background-repeat: no-repeat;
+  }
+  &.bTwo {
+    background-image: url("../images/folio/2.png");
+    background-repeat: no-repeat;
+  }
+  &.bThree {
+    background-image: url("../images/folio/3.png");
+    background-repeat: no-repeat;
+  }
+
+  .bFolio {
+    margin-top: auto;
+    margin-bottom: 60px;
+  }
+}
+.folioBanner-title {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 30px 0 20px 30px;
+}
+.folioBanner-price {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: auto;
+  margin-left: 30px;
 }

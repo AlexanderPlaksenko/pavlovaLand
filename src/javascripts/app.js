@@ -208,11 +208,11 @@ $("[data-link-to]").on('click', function (e) {
         $toElement = $this.attr('data-link-to');
 
     if ($($toElement).css('top') === headerHeight + 'px') {
-        top.$($toElement).css('top', '');
-        $('.activeTop').removeClass('activeTop').css('top', '');
+        top.$($toElement).css('top', '').hide();
+        $('.activeTop').removeClass('activeTop').css('top', '').hide();
         return false;
     } else {
-        $('.activeTop').removeClass('activeTop').css('top', '');
+        $('.activeTop').removeClass('activeTop').css('top', '').hide();
         top.$($toElement).show().animate({
             top: headerHeight
         }, 200);
@@ -222,17 +222,17 @@ $("[data-link-to]").on('click', function (e) {
 });
 
 (function vkFolio() {
-    var vkFolio = $('#vkFolio');
+    var vkFolioBrow = $('#vkFolioBrow');
     $.ajax({
         url: 'https://api.vk.com/method/photos.get?owner_id=-130717807&album_id=240798208&rev=1&extended=0&photo_sizes=0&count=6&v=5.69',
         type: "GET",
         dataType: "jsonp",
         success: function (data) {
             var items = data.response.items;
-
+            console.log(items);
             for (var i = 0; i < items.length; i++) {
-                vkFolio.append(
-                    '<div class="vkFolio-item">' +
+                vkFolioBrow.append(
+                    '<div class="vkFolio-item" data-fancybox="vkFolio" data-type="image" href='+items[i].photo_1280+'>' +
                         '<img src='+items[i].photo_604+' alt="">' +
                     '</div>'
                 );
