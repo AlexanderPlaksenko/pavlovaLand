@@ -2,15 +2,19 @@
 @import 'include-media';
 @import 'base/typography';
 
+@import 'loader';
+
 html {
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: -moz-crisp-edges;
 }
 
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+*::before {
+  max-width: 100%;
 }
 ::-webkit-scrollbar {
   width: 0;

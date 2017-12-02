@@ -1,20 +1,41 @@
 .vkFolio {
-  height: 80vh;
+  height: 90vh;
   overflow: auto;
 }
 .vkFolio-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: calc(100% - 222px);
+  padding: 40px 30px 0 30px;
+
+  .slick-next,
+  .slick-prev {
+    top: 46%;
+  }
+  .slick-prev {
+    left: 6px;
+  }
+  .slick-next {
+    right: 6px;
+  }
+  .slick-slide {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  }
 }
 .vkFolio-block {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 .vkFolio-item {
   max-width: 210px;
+  height: 150px;
+  overflow: hidden;
   margin: 5px;
+  display: flex!important;
+  align-items: center;
+  cursor: pointer;
 }
 .folioBanner {
   display: flex;

@@ -8,89 +8,9 @@ var fancy = require('fancy');
 var jm = require('jquery-mousewheel');
 var scrollbar = require('malihu-custom-scrollbar-plugin');
 
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-setInterval(
-    function mainSlider() {
-        var random = getRandomInt(0, 16);
-
-        var $li = $(".mainSlider .photoSlider");
-        var $liActive = $(".mainSlider .bg-on");
-
-        $li.eq(random % $li.length).addClass("bg-on");
-        $liActive.eq(random / 2 % $liActive.length).removeClass("bg-on");
-
-    }, 3000);
-
-$(".input").inputmask({
-    mask: ["+7 (999) 999-99-99"]
-});
-
-$('.med-image, .studio-image, .photoSlider').fancybox({
-    buttons: [
-        //'slideShow',
-        //'fullScreen',
-        //'thumbs',
-        //'download',
-        //'share',
-        'close'
-    ],
-    loop: true
-});
-
-$('.service-el_button').on('click', function () {
-    $(".formInput").inputmask({
-        mask: ["+7 (999) 999-99-99"]
-    });
-    $.fancybox.open({
-        type: 'inline',
-        src: '#service-request',
-        touch: false
-    })
-});
-
-$('.instagram-carousel').slick({
-    lazyLoad: 'ondemand',
-    dots: true,
-    infinite: true,
-    responsive: [{
-            breakpoint: 768,
-            settings: {
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                arrows: false
-            }
-        }
-    ]
-});
-$('.collective-carousel, .youtube-carousel').slick({
-    lazyLoad: 'ondemand',
-    dots: true,
-    infinite: true,
-    responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
-            }
-        }
-    ]
-});
+var header = $('.header-wrapper');
+var headerHeight = header.outerHeight();
+var vkFolioWrapper = $('.vkFolio-wrapper');
 
 (function vkFeedback() {
     var vkCarousel = $('.vk-carousel');
@@ -185,8 +105,150 @@ $('.collective-carousel, .youtube-carousel').slick({
         });
     })
 })();
-var header = $('.header-wrapper');
-var headerHeight = header.outerHeight();
+
+(function vkFolio() {
+    var vkFolioBrow = $('#vkFolioBrow');
+    var vkFolioLips = $('#vkFolioLips');
+    var vkFolioEye = $('#vkFolioEye');
+    $.ajax({
+        url: 'https://api.vk.com/method/photos.get?owner_id=-54002395&album_id=249445812&rev=1&extended=0&photo_sizes=0&count=60&v=5.69',
+        type: "GET",
+        dataType: "jsonp",
+        success: function (data) {
+            var items = data.response.items;
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].text === '#pavlovastudiobrow') {
+                    vkFolioBrow.append(
+                        '<div class="vkFolio-item" data-fancybox="browVK" data-type="image" href=' + items[i].photo_1280 + '>' +
+                        '<img src=' + items[i].photo_604 + ' alt="">' +
+                        '</div>'
+                    );
+                }
+                if (items[i].text === '#pavlovastudiolips') {
+                    vkFolioLips.append(
+                        '<div class="vkFolio-item" data-fancybox="lipsVK" data-type="image" href=' + items[i].photo_1280 + '>' +
+                        '<img src=' + items[i].photo_604 + ' alt="">' +
+                        '</div>'
+                    );
+                }
+                if (items[i].text === '#pavlovastudioeye') {
+                    vkFolioEye.append(
+                        '<div class="vkFolio-item" data-fancybox="eyeVK" data-type="image" href=' + items[i].photo_1280 + '>' +
+                        '<img src=' + items[i].photo_604 + ' alt="">' +
+                        '</div>'
+                    );
+                }
+            }
+        },
+    }).done(
+        function() {
+            vkFolioWrapper.slick({
+                dots: false,
+                infinite: true,
+                slidesToShow: 3,
+                rows: 2,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            arrows: false
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false
+                        }
+                    }
+                ]
+            }).init();
+        }
+    )
+})();
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function mainSlider() {
+    var random = getRandomInt(0, 16);
+
+    var $li = $(".mainSlider .photoSlider");
+    var $liActive = $(".mainSlider .bg-on");
+
+    $li.eq(random % $li.length).addClass("bg-on");
+    $liActive.eq(random / 2 % $liActive.length).removeClass("bg-on");
+}
+
+setInterval(mainSlider, 3000);
+
+$('.med-image, .studio-image, .photoSlider').fancybox({
+    buttons: [
+        //'slideShow',
+        //'fullScreen',
+        //'thumbs',
+        //'download',
+        //'share',
+        'close'
+    ],
+    loop: true
+});
+
+$('.service-el_button').on('click', function () {
+    $(".formInput").inputmask({
+        mask: ["+7 (999) 999-99-99"]
+    });
+    $.fancybox.open({
+        type: 'inline',
+        src: '#service-request',
+        touch: false
+    })
+});
+
+$('.instagram-carousel').slick({
+    lazyLoad: 'ondemand',
+    dots: true,
+    infinite: true,
+    responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false
+            }
+        }
+    ]
+});
+
+$('.collective-carousel, .youtube-carousel').slick({
+    lazyLoad: 'ondemand',
+    dots: true,
+    infinite: true,
+    responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: false
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }
+    ]
+});
 
 $("[data-scroll-to]").on('click', function () {
     var $this = $(this),
@@ -203,10 +265,8 @@ $("[data-scroll-to]").on('click', function () {
 });
 $("[data-link-to]").on('click', function (e) {
     e.preventDefault();
-
     var $this = $(this),
         $toElement = $this.attr('data-link-to');
-
     if ($($toElement).css('top') === headerHeight + 'px') {
         top.$($toElement).css('top', '').hide();
         $('.activeTop').removeClass('activeTop').css('top', '').hide();
@@ -221,22 +281,8 @@ $("[data-link-to]").on('click', function (e) {
     }
 });
 
-(function vkFolio() {
-    var vkFolioBrow = $('#vkFolioBrow');
-    $.ajax({
-        url: 'https://api.vk.com/method/photos.get?owner_id=-130717807&album_id=240798208&rev=1&extended=0&photo_sizes=0&count=6&v=5.69',
-        type: "GET",
-        dataType: "jsonp",
-        success: function (data) {
-            var items = data.response.items;
-            console.log(items);
-            for (var i = 0; i < items.length; i++) {
-                vkFolioBrow.append(
-                    '<div class="vkFolio-item" data-fancybox="vkFolio" data-type="image" href='+items[i].photo_1280+'>' +
-                        '<img src='+items[i].photo_604+' alt="">' +
-                    '</div>'
-                );
-            }
-        }
-    })
+(function maskedInput(){
+    $(".input").inputmask({
+        mask: ["+7 (999) 999-99-99"]
+    });
 })();

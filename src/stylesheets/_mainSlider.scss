@@ -15,9 +15,6 @@
   grid-auto-columns: 135px;
   grid-auto-rows: 135px;
   overflow: auto;
-  &:hover {
-    overflow: hidden;
-  }
   @include media("≥phone", "≤tablet") {
     &:hover {
       overflow: auto;
