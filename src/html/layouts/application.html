@@ -9,9 +9,46 @@
     {% include "shared/app-icons.html" %}
     {% block head %}{% endblock %}
 
-    <script src="javascripts/loader.js"></script>
   </head>
   <body>
+    <script src="javascripts/loader.js"></script>
+    <script>
+        (function () {
+            var _loaded = []
+                ,   _progress = 0
+                ,   _loadingBar = null;
+
+            function render() {
+                _loadingBar = _loadingBar || document.getElementById("bar");
+
+                if (_loadingBar) {
+                    _loadingBar.style.width = (_progress * 100) + "%";
+                }
+            }
+
+            RealProgress.onResourceLoad = function (name) {
+                _loaded.push(name.split("/").pop());
+            };
+
+            RealProgress.onProgress = function (progress) {
+                _progress = progress;
+                render();
+            };
+
+            RealProgress.onLoad = function (uncaptured) {
+                document.getElementById("bar").classList.add("hidden");
+            };
+        })();
+
+        RealProgress.init({
+            untracked: [
+                "favicon.ico",
+                "js/realprogress.js"
+            ]
+        });
+    </script>
+    <div id="loaded"></div>
+    <div id="bar"></div>
     {% include "components/header/header.html" %}
     
     {% block content %}{% endblock %}

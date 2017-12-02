@@ -263,6 +263,7 @@ $("[data-scroll-to]").on('click', function () {
 
     if ($focusElement) $($focusElement).focus();
 });
+
 $("[data-link-to]").on('click', function (e) {
     e.preventDefault();
     var $this = $(this),
