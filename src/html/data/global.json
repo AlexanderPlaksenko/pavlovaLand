@@ -1,6 +1,19 @@
 {
-  "message": "Blendid!",
+  "phone": [
+    {
+      "value": "ekb",
+      "phone": "8-800 555 47 24",
+      "phone2": "8-343 310 24 91"
+    },
+    {
+      "value": "msc",
+      "phone": "8-800 555 47 24",
+      "phone2": "8-495 121 02 06"
+    }
+  ],
+  "vkSettings": {
 
+  },
   "headerMenu": [
     {"value": "Портфолио",
      "hasScroll": false,

@@ -21,6 +21,9 @@
     flex-direction: column;
     align-self: flex-start;
   }
+  @include media("≥phone", "≤tablet") {
+    width: calc(100% - 122px);
+  }
 }
 .vkFolio-block {
   display: flex;
@@ -36,6 +39,9 @@
   display: flex!important;
   align-items: center;
   cursor: pointer;
+  @include media("≥phone", "≤tablet") {
+    margin: 0;
+  }
 }
 .folioBanner {
   display: flex;
@@ -65,6 +71,20 @@
   .bFolio {
     margin-top: auto;
     margin-bottom: 60px;
+    @include media("≥phone", "≤tablet") {
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom: 40px;
+      font-size: 12px;
+      max-width: 90%;
+    }
+  }
+
+  @include media("≥phone", "≤tablet") {
+    min-width: 122px;
+    max-width: 122px;
+    height: 244px;
+    background-size: contain;
   }
 }
 .folioBanner-title {
@@ -74,6 +94,10 @@
   line-height: 36px;
   text-transform: uppercase;
   margin: 30px 0 20px 30px;
+  @include media("≥phone", "≤tablet") {
+    font-size: 24px;
+    margin-left: 10px;
+  }
 }
 .folioBanner-price {
   color: #ffffff;
@@ -82,4 +106,8 @@
   line-height: 24px;
   margin-right: auto;
   margin-left: 30px;
+  @include media("≥phone", "≤tablet") {
+    font-size: 16px;
+    margin-left: 10px;
+  }
 }

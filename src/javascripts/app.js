@@ -152,7 +152,8 @@ var vkFolioWrapper = $('.vkFolio-wrapper');
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 2,
-                            arrows: false
+                            arrows: true,
+                            rows: 1
                         }
                     },
                     {
@@ -160,7 +161,8 @@ var vkFolioWrapper = $('.vkFolio-wrapper');
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
-                            arrows: false
+                            arrows: true,
+                            rows: 1
                         }
                     }
                 ]
@@ -197,7 +199,7 @@ $('.med-image, .studio-image, .photoSlider').fancybox({
     loop: true
 });
 
-$('.service-el_button').on('click', function () {
+$('.service-el_button, .bFolio').on('click', function () {
     $(".formInput").inputmask({
         mask: ["+7 (999) 999-99-99"]
     });
@@ -269,10 +271,12 @@ $("[data-link-to]").on('click', function (e) {
     var $this = $(this),
         $toElement = $this.attr('data-link-to');
     if ($($toElement).css('top') === headerHeight + 'px') {
+        $('body').removeClass('c'+$toElement);
         top.$($toElement).css('top', '').hide();
         $('.activeTop').removeClass('activeTop').css('top', '').hide();
         return false;
     } else {
+        $('body').addClass('c'+$toElement);
         $('.activeTop').removeClass('activeTop').css('top', '').hide();
         top.$($toElement).show().animate({
             top: headerHeight
