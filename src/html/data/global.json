@@ -1,34 +1,72 @@
 {
-  "phone": [
-    {
-      "value": "ekb",
-      "phone": "8-800 555 47 24",
-      "phone2": "8-343 310 24 91"
-    },
-    {
-      "value": "msc",
-      "phone": "8-800 555 47 24",
-      "phone2": "8-495 121 02 06"
-    }
-  ],
-  "vkSettings": {
-
+  "ekb": {
+    "headerMenu": [
+      {
+        "value": "Портфолио",
+        "hasScroll": false,
+        "hasLink": true
+      },
+      {
+        "value": "Услуги",
+        "hasScroll": true,
+        "hasLink": false
+      },
+      {
+        "value": "Запись",
+        "hasScroll": false,
+        "hasLink": true
+      },
+      {
+        "value": "Отзывы",
+        "hasScroll": true,
+        "hasLink": false
+      },
+      {
+        "value": "Контакты",
+        "hasScroll": false,
+        "hasLink": true
+      }
+    ],
+    "phone": [
+      {
+        "phone": "8-800 555 47 24",
+        "phone1": "8-343 310 24 91"
+      }
+    ]
   },
-  "headerMenu": [
-    {"value": "Портфолио",
-     "hasScroll": false,
-     "hasLink": true},
-    {"value": "Услуги",
-     "hasScroll": true,
-     "hasLink": false},
-    {"value": "Запись",
-     "hasScroll": false,
-     "hasLink": true},
-    {"value": "Отзывы",
-     "hasScroll": true,
-     "hasLink": false},
-    {"value": "Контакты",
-     "hasScroll": false,
-     "hasLink": true}
-  ]
+  "msc": {
+    "headerMenu": [
+      {
+        "value": "Портфолио",
+        "hasScroll": false,
+        "hasLink": true
+      },
+      {
+        "value": "Услуги",
+        "hasScroll": true,
+        "hasLink": false
+      },
+      {
+        "value": "Запись",
+        "hasScroll": false,
+        "hasLink": true
+      },
+      {
+        "value": "Отзывы",
+        "hasScroll": true,
+        "hasLink": false
+      },
+      {
+        "value": "Контакты",
+        "hasScroll": false,
+        "hasLink": true
+      }
+    ],
+    "phone": [
+      {
+        "phone": "8-800 555 47 24",
+        "phone1": "8-495 121 02 06"
+      }
+    ]
+  }
 }

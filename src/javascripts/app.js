@@ -291,3 +291,21 @@ $("[data-link-to]").on('click', function (e) {
         mask: ["+7 (999) 999-99-99"]
     });
 })();
+
+$(".phoneOnly").submit(function (e) {
+    e.preventDefault();
+    var form_data = $(this).serialize();
+    $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: form_data,
+        success: function () {
+            $.fancybox.close(true);
+            $.fancybox.open({
+                type: 'inline',
+                src: '#modal-success',
+                touch: false
+            })
+        }
+    })
+})

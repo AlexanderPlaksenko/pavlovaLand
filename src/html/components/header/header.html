@@ -7,11 +7,10 @@
 		</div>
 		
 		<div class='header-menu'>
-			{% for headerItem in headerMenu %}
+			{% for headerItem in city.headerMenu %}
                 <div class='header-menu_el'
                      {{ "data-scroll-to=" + "#id" + loop.index if headerItem.hasScroll}}
-					 {{ "data-link-to=" + "#link" + loop.index if headerItem.hasLink}}
-			>{{ headerItem.value }}</div>
+					 {{ "data-link-to=" + "#link" + loop.index if headerItem.hasLink}}>{{ headerItem.value }}</div>
 			{% endfor %}
 		</div>
 		
@@ -22,8 +21,8 @@
 			</div>
 			<div class='header-line'></div>
 			<div class='header-info_phones'>
-				<a href='tel:8-800 555 47 24'>{{  }}</a>
-				<a href='tel:8-495 121 02 06'>8-495 121 02 06</a>
+				<a href='tel:{{city.phone[0].phone}}'>{{ city.phone[0].phone }}</a>
+				<a href='tel:{{city.phone[0].phone1}}'>{{ city.phone[0].phone1 }}</a>
 			</div>
 		</div>
 	</div>

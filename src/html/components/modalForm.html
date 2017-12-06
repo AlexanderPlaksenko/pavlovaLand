@@ -1,9 +1,9 @@
 <div class='modalWrapper' id='service-request'>
-    <form action='' class='modalForm'>
+    <form action='' class='phoneOnly modalForm'>
         <p class='modalForm-text'>
             ДЛЯ ТОГО, ЧТО БЫ ПОЛУЧИТЬ ПОДРОБНУЮ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ДАННОЙ УСЛУГЕ, ЕЁ РАЗНОВИДНОСТЯМ И ЦЕНАМ СВЯЖИТЕСЬ С НАМИ ПО ТЕЛЕФОНУ
             <br>
-            <a href='tel:8-495 121 02 06' class='tel-number'>8-495 121 02 06</a>
+            <a href='tel:{{city.phone[0].phone1}}' class='tel-number'>{{city.phone[0].phone1}}</a>
             <br>ИЛИ ОСТАВЬТЕ СВОИ КОНТАКТНЫЕ ДАННЫЕ И МЫ С ВАМИ СВЯЖЕМСЯ В САМОЕ БЛИЖАЙШЕЕ ВРЕМЯ ДЛЯ ПОДРОБНОЙ КОНСУЛЬТАЦИИ
         </p>
         <label for='tel-modal'>
@@ -13,4 +13,10 @@
             Отправить
         </button>
     </form>
+</div>
+
+<div class="modalWrapper" id="modal-success">
+    <div class="modal-successText">
+        Спасибо! Ваша заявка принята, наш менеджер свяжется с вами в ближайшее время!
+    </div>
 </div>
