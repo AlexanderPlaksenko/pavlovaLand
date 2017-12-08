@@ -3,13 +3,13 @@
 		<div class='signTitle'>
 			Оставьте нам свой телефон, мы позвоним и расскажем Вам обо всех детелях.
 		</div>
-		<form action='' class='signForm'>
+		<form action='' class='fullForm signForm'>
 			<div class='signBlock'>
 				<label for='signName'>
-					<input placeholder="Ваше имя" class="inputForm" id='signName' type="text" required="">
+					<input placeholder="Ваше имя" class="inputForm" id="signName" name="name" type="text" required>
 				</label>
 				<label for='signTel'>
-					<input data-inputmask="'alias': 'phoneru'" placeholder="+7 (___) ___-__-__" class="input" id='signTel' minlength="10" type="tel" required="">
+					<input data-inputmask="'alias': 'phoneru'" placeholder="+7 (___) ___-__-__" class="input" name="phone" id='signTel' minlength="10" type="tel" required>
 				</label>
 				<button type='submit' class='button'>
 					Отправить
@@ -17,7 +17,7 @@
 			</div>
 
 			<label class='signCheckbox'>
-                <input type='checkbox' checked='' class='checkbox checkbox-valid'>
+                <input type='checkbox' class='checkbox checkbox-valid' required>
 				<span>Соглашаюсь с условиями публичной оферты</span>
 			</label>
 		</form>

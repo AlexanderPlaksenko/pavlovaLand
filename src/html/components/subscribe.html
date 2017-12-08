@@ -25,11 +25,13 @@
                 Подпишись на нас
             </div>
             <div class="subscribe-links">
-                <a class="subscribe-link" target='_blank' href="http://vk.com/tatuajmoscow"><img src="./images/subscribe/1.png" alt=""></a>
+                <a class="subscribe-link" target='_blank' href="{{city.vkLink}}"><img src="./images/subscribe/1.png" alt=""></a>
                 <a class="subscribe-link" target='_blank' href="http://instagram.com/pavlovastudio/"><img src="./images/subscribe/2.png" alt=""></a>
                 <a class="subscribe-link" target='_blank' href="https://www.youtube.com/channel/UC9YAnbAKvvh5Ikr5uOHPEwg/videos"><img src="./images/subscribe/3.png" alt=""></a>
-                <a class="subscribe-link" target='_blank' href="https://www.facebook.com/tatuajmoscow/"><img src="./images/subscribe/4.png" alt=""></a>
-<!--
+                {% if city.fbLink %}
+                    <a class="subscribe-link" target='_blank' href="{{city.fbLink}}"><img src="./images/subscribe/4.png" alt=""></a>
+                {% endif %}
+                <!--
                 <a class="subscribe-link" target='_blank' href="/"><img src="./images/subscribe/5.png" alt=""></a>
 -->
             </div>

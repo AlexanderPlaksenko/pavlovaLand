@@ -50,16 +50,19 @@
     <div id="loaded"></div>
     <div id="bar"></div>
 
-    {% set city = msc %}
+    {% set city = ekb %}
+    <script>
+        var city = 'ekb';
+    </script>
 
     {% include "components/header/header.html" %}
     
     {% block content %}{% endblock %}
-    
-    {% block javascript %}
-      <script src="javascripts/app.js"></script>
-    {% endblock %}
   
     {% include "components/modalForm.html" %}
+        
+    {% block javascript %}
+        <script src="javascripts/app.js"></script>
+    {% endblock %}
   </body>
 </html>

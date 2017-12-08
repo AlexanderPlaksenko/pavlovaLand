@@ -68,10 +68,16 @@ input[type=checkbox]:checked:after {
   content: "✓";
 }
 
-input[type=checkbox]:checked + label {
+input[type=checkbox] + span {
   color: #979797;
   font-weight: normal;
   text-decoration: line-through;
+  user-select: none;
+}
+
+input[type=checkbox]:checked + span {
+  color: #010101;
+  text-decoration: none;
 }
 
 .signCheckbox {
@@ -79,6 +85,11 @@ input[type=checkbox]:checked + label {
   font-weight: 500;
   display: flex;
   align-items: end;
+  cursor: pointer;
+
+  span {
+    margin-top: 3px;
+  }
 }
 
 .containerFlex {
