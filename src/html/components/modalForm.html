@@ -1,5 +1,8 @@
 <div class='modalWrapper' id='service-request'>
-    <form action='' class='phoneOnly modalForm'>
+    {% if city === msc %}<form action='' class='phoneOnly modalForm' onsubmit='yaCounter46932300.reachGoal("formSended", function () {
+    console.log("Данные успешно отправлены")}); return true;'>{% endif %}
+    {% if city === ekb %}<form action='' class='phoneOnly modalForm' onsubmit='yaCounter46932273.reachGoal("formSended", function () {
+    console.log("Данные успешно отправлены")}); return true;'>{% endif %}
         <p class='modalForm-text'>
             ДЛЯ ТОГО, ЧТО БЫ ПОЛУЧИТЬ ПОДРОБНУЮ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ ПО ДАННОЙ УСЛУГЕ, ЕЁ РАЗНОВИДНОСТЯМ И ЦЕНАМ СВЯЖИТЕСЬ С НАМИ ПО ТЕЛЕФОНУ
             <br>

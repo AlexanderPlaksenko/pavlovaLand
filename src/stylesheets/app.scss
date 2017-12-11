@@ -41,8 +41,8 @@ img {
 
   @include media-context(('custom': 678px)) {
     @include media("<=custom") {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 10px;
+      padding-left: 10px;
 
       > [class*="-title"] {
         font-size: 28px;

@@ -9,6 +9,22 @@
     {% include "shared/app-icons.html" %}
     {% block head %}{% endblock %}
 
+    <!-- Facebook Pixel Code -->
+      <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '187244778494252');
+          fbq('track', 'PageView');
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+                     src="https://www.facebook.com/tr?id=187244778494252&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
   </head>
   <body>
     <script src="javascripts/loader.js"></script>
@@ -50,9 +66,9 @@
     <div id="loaded"></div>
     <div id="bar"></div>
 
-    {% set city = ekb %}
+    {% set city = msc %}
     <script>
-        var city = 'ekb';
+        var city = 'msc';
     </script>
 
     {% include "components/header/header.html" %}
@@ -64,5 +80,13 @@
     {% block javascript %}
         <script src="javascripts/app.js"></script>
     {% endblock %}
+
+    {% if city === msc %}
+      <!-- Yandex.Metrika counter --><script type="text/javascript" >(function (d, w, c) {(w[c] = w[c] || []).push(function() {try {w.yaCounter46932300 = new Ya.Metrika({id:46932300,clickmap:true,trackLinks:true,accurateTrackBounce:true});} catch(e){}});var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),f = function () { n.parentNode.insertBefore(s, n); };s.type = "text/javascript";s.async = true;s.src = "https://mc.yandex.ru/metrika/watch.js";if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); }})(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/46932300" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+    {% endif %}
+
+    {% if city === ekb %}
+      <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46932273 = new Ya.Metrika({ id:46932273, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46932273" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    {% endif %}
   </body>
 </html>

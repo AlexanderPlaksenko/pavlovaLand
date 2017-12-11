@@ -8,8 +8,10 @@
 				Бесплатная консультация профессионального мастера
 			</div>
 		</div>
-		
-		<form class='phoneOnly form cons-form' action=''>
+		{% if city === msc %}<form action='' class='phoneOnly form cons-form' onsubmit='yaCounter46932300.reachGoal("formSended", function () {
+    	console.log("Данные успешно отправлены")}); return true;'>{% endif %}
+		{% if city === ekb %}<form action='' class='phoneOnly form cons-form' onsubmit='yaCounter46932273.reachGoal("formSended", function () {
+    	console.log("Данные успешно отправлены")}); return true;'>{% endif %}
 			<input data-inputmask="'alias': 'phoneru'" placeholder='+7 (___) ___-__-__' class='input' name='phone' minlength='10' type='tel' required>
 			
 			<button type='submit' class='button'>

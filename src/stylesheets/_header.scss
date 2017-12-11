@@ -25,8 +25,8 @@
         .header-menu {
             order: 3;
             margin-top: 10px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: -9px;
+            margin-right: -9px;
         }
         .header-info {order: 2}
     }
@@ -51,6 +51,9 @@
 
     color: #2f2f2f;
     cursor: pointer;
+    @include media("≥phone", "≤tablet") {
+        font-size: 13px;
+    }
 }
 
 .header-info

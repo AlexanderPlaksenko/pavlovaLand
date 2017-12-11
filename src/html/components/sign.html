@@ -3,7 +3,10 @@
 		<div class='signTitle'>
 			Оставьте нам свой телефон, мы позвоним и расскажем Вам обо всех детелях.
 		</div>
-		<form action='' class='fullForm signForm'>
+		{% if city === msc %}<form action='' class='fullForm signForm' onsubmit='yaCounter46932300.reachGoal("formSended", function () {
+    	console.log("Данные успешно отправлены")}); return true;'>{% endif %}
+		{% if city === ekb %}<form action='' class='fullForm signForm' onsubmit='yaCounter46932273.reachGoal("formSended", function () {
+    	console.log("Данные успешно отправлены")}); return true;'>{% endif %}
 			<div class='signBlock'>
 				<label for='signName'>
 					<input placeholder="Ваше имя" class="inputForm" id="signName" name="name" type="text" required>
