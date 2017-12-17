@@ -11,6 +11,10 @@
                           <p>'.$subject.'</p>
                           <p>Имя: '.$_POST['name'].'</p>                          
                           <p>Телефон: '.$_POST['phone'].'</p>
+                          <p>Форма: '.$_POST['form_name'].'</p>
+                          <p>utm_source: '.$_POST['utm_source'].'</p>
+                          <p>utm_medium: '.$_POST['utm_medium'].'</p>
+                          <p>utm_campaign: '.$_POST['utm_campaign'].'</p>
                       </body>
                   </html>'; //Текст нащего сообщения можно использовать HTML теги
           $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма

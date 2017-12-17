@@ -46,10 +46,10 @@
     border: 2px solid transparent;
     margin: -3px;
     transition: all .15s linear;
+    padding-right: 2px;
   }
   &:hover {
     &:before {
-      content: '';
       border: 2px solid #833582;
     }
   }

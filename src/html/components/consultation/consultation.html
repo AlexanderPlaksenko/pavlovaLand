@@ -13,7 +13,11 @@
 		{% if city === ekb %}<form action='' class='phoneOnly form cons-form' onsubmit='yaCounter46932273.reachGoal("formSended", function () {
     	console.log("Данные успешно отправлены")}); return true;'>{% endif %}
 			<input data-inputmask="'alias': 'phoneru'" placeholder='+7 (___) ___-__-__' class='input' name='phone' minlength='10' type='tel' required>
-			
+
+			<input type="hidden" name="utm_source">
+			<input type="hidden" name="utm_medium">
+			<input type="hidden" name="utm_campaign">
+			<input type="hidden" name="form_name" value="Форма консультации - консультация">
 			<button type='submit' class='button'>
 				Отправить
 			</button>

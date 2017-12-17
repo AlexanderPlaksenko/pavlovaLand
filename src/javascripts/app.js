@@ -1,5 +1,4 @@
 'use strict';
-import './modules';
 
 global.jQuery = global.$ = require('jquery');
 var slick = require('slick-carousel');
@@ -214,7 +213,7 @@ $('.med-image, .studio-image, .photoSlider').fancybox({
     loop: true
 });
 
-$('.service-el_button, .bFolio').on('click', function () {
+function modalForm() {
     $(".formInput").inputmask({
         mask: ["+7 (999) 999-99-99"]
     });
@@ -222,8 +221,17 @@ $('.service-el_button, .bFolio').on('click', function () {
         type: 'inline',
         src: '#service-request',
         touch: false
-    })
-});
+    });
+
+    var serviceName = $(this).text().trim();
+    var serviveNameInput = $("input[name='service_name']");
+
+    serviveNameInput.val(serviceName)
+}
+
+$('.service-el_button').on('click', modalForm);
+
+$('.bFolio').on('click', modalForm);
 
 $('.instagram-carousel').slick({
     lazyLoad: 'ondemand',
@@ -342,3 +350,21 @@ $(".fullForm").submit(function (e) {
         }
     })
 });
+
+// Parse the URL
+function getUtmParameters(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+// Give the URL parameters variable names
+var source = getUtmParameters('utm_source');
+var medium = getUtmParameters('utm_medium');
+var campaign = getUtmParameters('utm_campaign');
+
+// Put the variable names into the hidden fields in the form.
+$("input[name='utm_source']").val(source);
+$("input[name='utm_medium']").val(medium);
+$("input[name='utm_campaign']").val(campaign);
